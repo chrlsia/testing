@@ -41,6 +41,7 @@ mod tests {
     // all of the above module
     // * is the globe operator
     use super::*;
+    use pretty_assertions::assert_eq;
 
     #[test]
     fn museum_sells_ticket_to_increase_revenue() {
@@ -84,3 +85,15 @@ mod tests {
 // assert! asserts that some value or condition is true
 // assert! gets one arguments which evaluates to true or false
 // if it is true the test pass otherwise fails
+
+/* we want to have dependencies into our program BUT only for us for development and NOT to include them into binary code...=>
+in Cargo.toml file create a new entry an under there put
+the dependencies you want:
+
+[dev-dependencies]
+pretty_assertions="1.4.1"
+
+under mod you have to use:
+use pretty_assetions::assert_eq
+
+*/
