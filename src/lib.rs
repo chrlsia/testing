@@ -33,8 +33,15 @@ mod tests{
         // create an new mut instance of Museum
         // invokesell_ticket method
         // assert result
-        let mut museum = Museum::new();
+
+        // with the keyword super(which is the parent module)
+        // we solved the problem
+        let mut museum = super::Museum::new();
         museum.sell_ticket();
         assert_eq!(museum.value, 25);
     }
 }
+
+// in the mod tests we can have fn without the #[test]
+// attribute just as helpful function for the test functions
+// compiler can accept it
