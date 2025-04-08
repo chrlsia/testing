@@ -34,9 +34,11 @@ mod tests{
         // invokesell_ticket method
         // assert result
 
-        // with the keyword super(which is the parent module)
-        // we solved the problem
-        let mut museum = super::Museum::new();
+        // what about crate keyword?
+        // crate keyword provides an absolute path
+        // starting from the root which is the lib crate
+        // so the code above
+        let mut museum = crate::Museum::new();
         museum.sell_ticket();
         assert_eq!(museum.value, 25);
     }
