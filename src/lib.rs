@@ -51,7 +51,10 @@ mod tests {
         // and now we can call Museum directly
         let mut museum = Museum::new();
         museum.sell_ticket();
-        assert_eq!(museum.value, 25);
+        // assert_eq!(museum.value, 25);
+
+        // here we introduce the assert_ne! macro
+        assert_ne!(museum.value,0);
     }
 
     #[test]
