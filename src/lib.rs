@@ -24,3 +24,13 @@ impl Museum{
         self.paintings.len()>2
     }
 }
+
+#[test]
+fn museum_sells_ticket_to_increase_revenue(){
+    // create an new mut instance of Museum
+    // invokesell_ticket method
+    // assert result
+    let mut museum = Museum::new();
+    museum.sell_ticket();
+    assert_eq!(museum.value, 25);
+}
