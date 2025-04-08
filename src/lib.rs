@@ -1,4 +1,4 @@
-#[derive(Debug)]
+#[derive(Debug,Eq,PartialEq)]
 struct Museum {
     paintings: Vec<String>, // names of paintings
     value: u32,             // money for the painting
@@ -80,8 +80,8 @@ mod tests {
 
     #[test]
     fn new_museums_are_equal(){
-        let mut museum1 = Museum::new();
-        let mut museum2 = Museum::new();
+        let museum1 = Museum::new();
+        let museum2 = Museum::new();
         assert_eq!(museum1,museum2);
     }
 }
