@@ -25,12 +25,16 @@ impl Museum{
     }
 }
 
-#[test]
-fn museum_sells_ticket_to_increase_revenue(){
-    // create an new mut instance of Museum
-    // invokesell_ticket method
-    // assert result
-    let mut museum = Museum::new();
-    museum.sell_ticket();
-    assert_eq!(museum.value, 25);
+// we can create a mod and put the test functions in it
+// the name of mod can can be given arbitralily from us
+mod tests{
+    #[test]
+    fn museum_sells_ticket_to_increase_revenue(){
+        // create an new mut instance of Museum
+        // invokesell_ticket method
+        // assert result
+        let mut museum = Museum::new();
+        museum.sell_ticket();
+        assert_eq!(museum.value, 25);
+    }
 }
