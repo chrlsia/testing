@@ -63,7 +63,7 @@ mod tests {
         let mut museum = Museum::new();
         museum.sell_ticket();
         museum.sell_ticket();
-        assert_eq!(museum.value, 50); // there is a failure
+        assert_eq!(museum.value, 510); // there is a failure
     }
 
     #[test]
