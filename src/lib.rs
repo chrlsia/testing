@@ -61,7 +61,23 @@ mod tests {
         museum.sell_ticket();
         assert_eq!(museum.value, 50); // there is a failure
     }
+
+    #[test]
+    fn museum_can_have_impressive_art_collection(){
+        let mut museum = Museum::new();
+        museum.buy_painting("Mona Lisa");
+        museum.buy_painting("The Starry NIght");
+        museum.buy_painting("Girl with a pearl earring");
+        // for now the len of vec should be 3
+        // duw to the fact that we bought 3 paintings
+        // assert_eq!( museum.has_impressive_collection(),true);
+       assert!(museum.has_impressive_collection());
+    }
 }
 // we we have multiple tests to run rust runs then in
 // multiple threads. so if one test fails the program
 // does not exit but still runs the rest of the tests.
+
+// assert! asserts that some value or condition is true
+// assert! gets one arguments which evaluates to true or false
+// if it is true the test pass otherwise fails
