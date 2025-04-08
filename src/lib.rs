@@ -77,6 +77,13 @@ mod tests {
         // assert_eq!( museum.has_impressive_collection(),true);
        assert!(museum.has_impressive_collection());
     }
+
+    #[test]
+    fn new_museums_are_equal(){
+        let mut museum1 = Museum::new();
+        let mut museum2 = Museum::new();
+        assert_eq!(museum1,museum2);
+    }
 }
 // we we have multiple tests to run rust runs then in
 // multiple threads. so if one test fails the program
