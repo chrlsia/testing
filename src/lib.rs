@@ -46,7 +46,7 @@ mod tests {
     #[test]
     fn museum_sells_ticket_to_increase_revenue() {
         // create an new mut instance of Museum
-        // invokesell_ticket method
+        // invoke sell_ticket method
         // assert result
 
         // and now we can call Museum directly
@@ -63,7 +63,7 @@ mod tests {
         let mut museum = Museum::new();
         museum.sell_ticket();
         museum.sell_ticket();
-        assert_eq!(museum.value, 510); // there is a failure
+        assert_eq!(museum.value, 50); 
     }
 
     #[test]
