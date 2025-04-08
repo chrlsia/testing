@@ -80,7 +80,8 @@ mod tests {
 
     #[test]
     fn new_museums_are_equal(){
-        let museum1 = Museum::new();
+        let mut museum1 = Museum::new();
+        museum1.sell_ticket();
         let museum2 = Museum::new();
         assert_eq!(museum1,museum2);
     }
