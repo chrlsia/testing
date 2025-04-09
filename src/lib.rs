@@ -75,14 +75,15 @@ mod tests {
         // for now the len of vec should be 3
         // duw to the fact that we bought 3 paintings
         // assert_eq!( museum.has_impressive_collection(),true);
-       assert!(museum.has_impressive_collection());
+       assert!(museum.has_impressive_collection(),"museum does not have an impressive collection");
     }
 
     #[test]
     fn new_museums_are_equal(){
         let mut museum1 = Museum::new();
         museum1.sell_ticket();
-        let museum2 = Museum::new();
+        let mut museum2 = Museum::new();
+        museum2.sell_ticket();
         assert_eq!(museum1,museum2);
     }
 }
